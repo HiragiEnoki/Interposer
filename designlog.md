@@ -20,25 +20,33 @@ ELI-Interposerは私、ひいらぎえのきのmeishiです。
 ## ■design-log  
 
 ### ●発端
-funnel-A4をく組み上げ、安心しきった私を待っていたのは先達からの熱いはげましのお言葉だった……
+funnel-A4を組み上げ、安心しきった私を待っていたのは先達からの熱いはげましのお言葉だった……
+
+![post](https://github.com/HiragiEnoki/iroiro/blob/master/interposer/postA.JPG)
+![post](https://github.com/HiragiEnoki/iroiro/blob/master/interposer/repA.JPG)
+![post](https://github.com/HiragiEnoki/iroiro/blob/master/interposer/repB.JPG)
+
+やるかあ，となったのがゆるキー2週間前の日曜朝一時のことでした．
 
 
 ### ●要件定義
-なにをするにも要件定義が大事だと思います。
-・名刺とは何か？を考えた
-名刺は自分の名前を紹介し、必要であれば備忘録となることで人と自分をつなげるものだと考えました．で，
-・でかいシルクロゴ
-・USBhub機能
-をメインの要件としました．物理的に人（のキーボード）とつながっていくぅ！！！
 
-サブ要件として下記を定義します。
-・6キー+バースイッチ
-キーの数はhifumi（かわいいっすよね）と同数，あとついでに試してみたかったバースイッチを突っ込んでます。
+時間がない．なにをするにもまずは要件定義が大事だと思います。  
+- 名刺とは何か？を考えた
+	名刺は自分の名前を紹介し、必要であれば備忘録となることで人と自分をつなげるものだと考えました．で，  
+	- でかいシルクロゴ
+	- USBハブ機能
+	をメインの要件としました．物理的に人（のキーボード）とつながっていくぅ！！！  
+	こいつキモチワルいな
 
-ここで基板の名前を決めてしまいます。名前決まんないとlogoデザインができないし……
-ELI〈Interposer〉trialとしました．私のすべての生成物がELIのプロダクトとなるのだ．
-インターポーザーってのは，シリコンダイのピッチを変換してPWBに実装しやすくするための基板ですね。
-本基板ではUSB一口を二口に変換します。
+サブ要件として下記を定義します。  
+	- 6キー+バースイッチ
+キーの数はhifumi（かわいいっすよね）と同数，あとついでに試してみたかったバースイッチを突っ込んでます。  
+
+ここで基板の名前を決めてしまいます。名前決まんないとlogoデザインができないし……  
+ELI〈Interposer〉trialとしました．私のすべての生成物がELIのプロダクトとなるのだ．  
+インターポーザーってのは，シリコンダイのピッチを変換してPWBに実装しやすくするための基板ですね。  
+今回は基板のサイズ的にUSB一口を二口へ変換するのが関の山というところでしょうか。
 
 
 
@@ -55,10 +63,10 @@ ELI〈Interposer〉trialとしました．私のすべての生成物がELIの�
 	- シルクのために背面は可能な限りキレイに仕上げる  
 　	（＝ビアの数を最小限にする、背面に部品実装しない。）
 
-USBHUBの回路をどうしようか考えましたが，周辺回路込で一番小さくて安いコレを中央に据えることにしました．一石で四口まとめて一口にできるやり手です．購入経路がaitendoだけってのが気に入らねえけどまあいいでしょう．困るのがどうやって32u4と接続するかなんですが，promicroを載せてusbケーブルってのはダサくてやだったので何も考えずにprimicroを平面展開(違う)してます。  meishiってそういうんじゃないよねというのに配ってから気づいた。
+USBハブの回路をどうしようか考えましたが，周辺回路込で一番小さくて安い[コレ](http://www.aitendo.com/product/16185)を中央に据えることにしました．一石で四口まとめて一口にできるやり手です．購入経路がaitendoだけってのが気に入らねえけどまあいいでしょう．困るのがどうやって32u4と接続するかなんですが，promicroを載せてusbケーブルってのはダサくてやだったので何も考えずにprimicroを平面展開(違う)してます。  meishiってそういうんじゃないよねというのに配ってから気づいた。
 
-ここまでをキメてからkicadをインストールし，foostanさんのコレとかまーくさんのコレとかを読みながらai03さんのコレとかdegikeyのコレとかをインストールして，
-もげないマイクロの回路図とかaitendoのUSBhubサンプルスケマチックを参考に回路図を作り、digikeyと秋月とにらめっこしながら買える部品の中から部品を選んでアートワークを行いました。こういう無茶をしたりなどした（32u4のパッド抜き画像）。土曜午前三時の作業がこの後悲劇を招くのであった……
+ここまでをキメてからkicadをインストールし，foostanさんの[コレ](https://github.com/foostan/mkbd/blob/master/developers_guide/developrs_guide_jp.md)とかまーくさんの[コレ](https://marksard.github.io/2019/04/25/about-treadstone32/)とかを読みながらai03さんの[コレ](https://wiki.ai03.me/books/pcb-design/page/list-of-kicad-keyboard-parts-libraries)とかdegikeyの[コレ](https://www.digikey.jp/ja/resources/design-tools/kicad)とかをインストールして，  
+もげないマイクロの回路図とかaitendoのUSBhubサンプルスケマチックを参考に回路図を作り、digikeyと秋月とにらめっこしながら買える部品の中から部品を選んでアートワークを行いました。こういう無茶をしたりなどした![logo](https://github.com/HiragiEnoki/iroiro/blob/master/interposer/D9Dbc5SU8AIf7vv.png)。土曜午前三時の作業がこの後悲劇を招くのであった……
 
 シルクはクリスタでさくさくやっていくスタイル。ほめてもらえてうれしいですね。ほかにほめるところがなかっただけ？まあ……  
 
@@ -68,19 +76,17 @@ USBHUBの回路をどうしようか考えましたが，周辺回路込で一�
 
 あとはALLPCBにデータ投げて終わり。土曜日朝7時のことでした。
 
-https://twitter.com/fuyu_enoki/status/1139648489086840833
+![mini](https://github.com/HiragiEnoki/iroiro/blob/master/interposer/dakkou.JPG)
 
-<blockquote class="twitter-tweet" data-conversation="none" data-lang="ja"><p lang="ja" dir="ltr">脱稿した <a href="https://t.co/eJWcqR3GIQ">pic.twitter.com/eJWcqR3GIQ</a></p>&mdash; 冬野菜 (@fuyu_enoki) <a href="https://twitter.com/fuyu_enoki/status/1139648489086840833?ref_src=twsrc%5Etfw">2019年6月14日</a></blockquote>
-<script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
 
 
 このあと，泣きながらBOMをdegikeyに投げたり秋月に投げたりしている最中、usbコネクタのフットプリントに間違えてmini用のプリントを割り付けていることに気づいて大爆笑したりなどした．
 
 ## ■buildlog
 ### ●BOM
-（ここに表）
+（工事中）
 ### ●対応表
-（ここに絵）
+（工事中）
 
 
 ### ●実装
@@ -89,12 +95,24 @@ https://twitter.com/fuyu_enoki/status/1139648489086840833
 
 ブツン
 
-とPCが落ちてですね．それからはまあてんやわんやですよ，aitendoやりやがったなと思いながらfeiを取り外してみたり，32u4で雑なことしたのが悪いのかとdatasheet読んでみたり、どこかでGNDに落ちてないかテスターで当たりまくってみたりとしてみたんですが，・USBのコネクタだけなら落ちない　・そこにfeiをつなぐと落ちる　・fe1.1を外してUSB–32u4直でも落ちる　……これはおかしい，というところで思い出したのがmini-micro取り違え事件．回路図を見る．フットプリントを見る．また回路図を見る．フットプリントライブラリを……　あれ……microとminiってピン配逆なの……？　　
-それ！！！！！！！！！それですわ！！！！！！！！！！！！！　　
-（お前はいつもそうだの画像）
+とPCが落ちてですね．それからはまあてんやわんやですよ，aitendoやりやがったなと思いながらfeを取り外してみたり，32u4で雑なことしたのが悪いのかとdatasheet読んでみたり、どこかでGNDに落ちてないかテスターで当たりまくってみたりとしてみたんですが，
+- USBのコネクタだけなら落ちない
+- そこにfeiをつなぐと落ちる
+- fe1.1を外してUSB–32u4直でも落ちる
+……これはおかしい，というところで思い出したのがmini-micro取り違え事件．回路図を見る．フットプリントを見る．また回路図を見る．フットプリントライブラリを……  あれ……microとminiってピン配逆なの……？　　
+それ！！！！！！！！！それですわ！！！！！！！！！！！！！  
 
-泣きながらジャンパで逆順になおしたら動いたのでやっぱりこういう感じでしたね．　　aitendoは悪くなかった．
+![kuso](https://github.com/HiragiEnoki/iroiro/blob/master/interposer/dainasi.JPG)
+<blockquote class="twitter-tweet" data-lang="ja"><p lang="und" dir="ltr"><a href="https://t.co/mbwbVpCJ56">pic.twitter.com/mbwbVpCJ56</a></p>&mdash; Molg H. (@molgh) <a href="https://twitter.com/molgh/status/726854917214879744?ref_src=twsrc%5Etfw">2016年5月1日</a></blockquote>
+
+
+泣きながらジャンパで逆順になおしたら動いたのでやっぱりこういう感じでしたね．  
+![kuso](https://github.com/HiragiEnoki/iroiro/blob/master/interposer/P1000734.JPG)
+aitendoは悪くなかった．
 
 あとはクソが誰がこんなもん考えたんじゃいと思いながらストックしてあったミニ四駆のパーツでスイッチバーを組んで終わりです．
 
 いやコレ……配れんわな，ということでゆるキー会場では何人かに押し付けておわりでした．rev.アップしてもう一回発注したいですね。
+
+
+おわり
