@@ -32,15 +32,17 @@ funnel-A4を組み上げ、安心しきった私を待っていたのは先達�
 ### ●要件定義
 
 時間がない．なにをするにもまずは要件定義が大事だと思います。  
-- 名刺とは何か？を考えた
+- 名刺とは何か？を考えた  
 	名刺は自分の名前を紹介し、必要であれば備忘録となることで人と自分をつなげるものだと考えました．で，  
 	- でかいシルクロゴ
 	- USBハブ機能
-	をメインの要件としました．物理的に人（のキーボード）とつながっていくぅ！！！  
-	こいつキモチワルいな
+	
+　　をメインの要件としました．物理的に人（のキーボード）とつながっていくぅ！！！  
+　　こいつキモチワルいな
 
 サブ要件として下記を定義します。  
-	- 6キー+バースイッチ
+　　- 6キー+バースイッチ  
+
 キーの数はhifumi（かわいいっすよね）と同数，あとついでに試してみたかったバースイッチを突っ込んでます。  
 
 ここで基板の名前を決めてしまいます。名前決まんないとlogoデザインができないし……  
@@ -66,7 +68,9 @@ ELI〈Interposer〉trialとしました．私のすべての生成物がELIの�
 USBハブの回路をどうしようか考えましたが，周辺回路込で一番小さくて安い[コレ](http://www.aitendo.com/product/16185)を中央に据えることにしました．一石で四口まとめて一口にできるやり手です．購入経路がaitendoだけってのが気に入らねえけどまあいいでしょう．困るのがどうやって32u4と接続するかなんですが，promicroを載せてusbケーブルってのはダサくてやだったので何も考えずにprimicroを平面展開(違う)してます。  meishiってそういうんじゃないよねというのに配ってから気づいた。
 
 ここまでをキメてからkicadをインストールし，foostanさんの[コレ](https://github.com/foostan/mkbd/blob/master/developers_guide/developrs_guide_jp.md)とかまーくさんの[コレ](https://marksard.github.io/2019/04/25/about-treadstone32/)とかを読みながらai03さんの[コレ](https://wiki.ai03.me/books/pcb-design/page/list-of-kicad-keyboard-parts-libraries)とかdegikeyの[コレ](https://www.digikey.jp/ja/resources/design-tools/kicad)とかをインストールして，  
-もげないマイクロの回路図とかaitendoのUSBhubサンプルスケマチックを参考に回路図を作り、digikeyと秋月とにらめっこしながら買える部品の中から部品を選んでアートワークを行いました。こういう無茶をしたりなどした![logo](https://github.com/HiragiEnoki/iroiro/blob/master/interposer/D9Dbc5SU8AIf7vv.png)。土曜午前三時の作業がこの後悲劇を招くのであった……
+もげないマイクロの回路図とかaitendoのUSBhubサンプルスケマチックを参考に回路図を作り、digikeyと秋月とにらめっこしながら買える部品の中から部品を選んでアートワークを行いました。こういう無茶をしたりなどした．  
+![logo](https://github.com/HiragiEnoki/iroiro/blob/master/interposer/D9Dbc5SU8AIf7vv.png)
+土曜午前三時の作業がこの後悲劇を招くのであった……
 
 シルクはクリスタでさくさくやっていくスタイル。ほめてもらえてうれしいですね。ほかにほめるところがなかっただけ？まあ……  
 
