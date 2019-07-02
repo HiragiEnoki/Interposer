@@ -68,6 +68,12 @@ USBHUBの回路をどうしようか考えましたが，周辺回路込で一�
 
 あとはALLPCBにデータ投げて終わり。土曜日朝7時のことでした。
 
+https://twitter.com/fuyu_enoki/status/1139648489086840833
+
+<blockquote class="twitter-tweet" data-conversation="none" data-lang="ja"><p lang="ja" dir="ltr">脱稿した <a href="https://t.co/eJWcqR3GIQ">pic.twitter.com/eJWcqR3GIQ</a></p>&mdash; 冬野菜 (@fuyu_enoki) <a href="https://twitter.com/fuyu_enoki/status/1139648489086840833?ref_src=twsrc%5Etfw">2019年6月14日</a></blockquote>
+<script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+
+
 このあと，泣きながらBOMをdegikeyに投げたり秋月に投げたりしている最中、usbコネクタのフットプリントに間違えてmini用のプリントを割り付けていることに気づいて大爆笑したりなどした．
 
 ## ■buildlog
